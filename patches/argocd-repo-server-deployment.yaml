@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: argocd-repo-server
-  spec:
-    replicas: 2
-    template:
-      spec:
-        containers:
-        - name: argocd-repo-server
-          env:
-            # the timeout for the templating engine, Argo CD forks the Helm or Kustomize commands and by default there's 90 seconds limit set for these operations
-            # Sometimes this may not be enough so here the values is incremented to 180 seconds
-            - name: "ARGOCD_EXEC_TIMEOUT"
-              value: "3m"
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+      - name: argocd-repo-server
+        env:
+          # the timeout for the templating engine, Argo CD forks the Helm or Kustomize commands and by default there's 90 seconds limit set for these operations
+          # Sometimes this may not be enough so here the values is incremented to 180 seconds
+          - name: "ARGOCD_EXEC_TIMEOUT"
+            value: "3m"
