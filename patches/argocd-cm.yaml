@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: argocd-cm
 data:
+  accounts.jaxon: apiKey, login
   timeout.reconciliation: 300s
