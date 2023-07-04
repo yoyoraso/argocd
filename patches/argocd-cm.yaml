@@ -4,4 +4,5 @@ metadata:
   name: argocd-cm
 data:
   accounts.jaxon: apiKey, login
+  admin.enabled: "false"
   timeout.reconciliation: 300s
