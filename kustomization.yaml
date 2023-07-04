@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: argocd
 bases:
-- github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.1.1
+- github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.7.6
 
 # Modify the already existing argocd-cm configMap resource
 # For the change to take effect, repo-server should be restarted (kubectl rollout restart -n argocd deployment argocd-repo-server)
