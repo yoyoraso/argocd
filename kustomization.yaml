@@ -3,5 +3,7 @@ kind: Kustomization
 namespace: argocd
 bases:
 - github.com/argoproj/argo-cd/manifests/core-install?ref=v2.1.1
+patchesStrategicMerge:
+- patches/argocd-cm.yaml
 resources:
 - resources/namespace.yaml
