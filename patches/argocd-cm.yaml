@@ -6,5 +6,7 @@ data:
   accounts.jaxon: apiKey, login
   # Service account user that will work with a token
   accounts.gitops-ci: apiKey
-  admin.enabled: "false"
+  #admin.enabled: "false"
   timeout.reconciliation: 300s
+  # For demo purpose
+  users.anonymous.enabled: "true"
