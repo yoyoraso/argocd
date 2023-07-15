@@ -8,6 +8,7 @@ bases:
 # For the change to take effect, repo-server should be restarted (kubectl rollout restart -n argocd deployment argocd-repo-server)
 patchesStrategicMerge:
 - patches/argocd-cm.yaml
+- patches/argocd-dex-server.yaml
 - patches/argocd-server-deployment.yaml
 - patches/argocd-repo-server-deployment.yaml
 - patches/argocd-rbac-cm.yaml
