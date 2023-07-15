@@ -7,4 +7,6 @@ data:
   policy.csv: |
     p, role:user-update, accounts, update, *, allow
     p, role:user-update, accounts, get, *, allow
+    p, role:admin, applications, *, */*, allow
     g, jaxon, role:user-update
+    g, jaxon, role:admin
