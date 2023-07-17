@@ -7,20 +7,22 @@ spec:
   generators:
     - list:
         elements:
-          - namespace: dev
-          - namespace: test
+          - env: dev
+          - env: test
   template:
     metadata:
-      name: '{{ namespace }}-guestbook'
+      name: 'guestbook-{{ env }}'
+      finalizers:
+        - resources-finalizer.argocd.argoproj.io
     spec:
-      project: default
+      project: '{{ env }}'
       source:
         repoURL: https://github.com/argoproj/argocd-example-apps.git
         targetRevision: HEAD
         path: guestbook
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{ namespace }}'
+        namespace: '{{ env }}'
       syncPolicy:
         automated:
           selfHeal: true
