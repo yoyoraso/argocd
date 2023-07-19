@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: dev
+  namespace: argocd
+spec:
+  description: dev environment project
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - '*'
+  # Only permit applications to deploy to the dev namespace in the same cluster
+  destinations:
+  - namespace: dev
+    server: https://kubernetes.default.svc
+  # Allow all resources
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'

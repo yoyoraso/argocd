@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: test
+  namespace: argocd
+spec:
+  description: test environment project
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - '*'
+  # Only permit applications to deploy to the test namespace in the same cluster
+  destinations:
+  - namespace: test
+    server: https://kubernetes.default.svc
+  # Allow all resources
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
