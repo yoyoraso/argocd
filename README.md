@@ -1,4 +1,5 @@
 # argocd
+Ahmed Reda Abd Elbaset Ismail
 
 ### Making argocd manage itself
 ```bash
@@ -8,3 +9,10 @@ kustomize build . | k apply -f -
 # Now create an argocd application that will point to that kustomization so that any change in the files gets reflected
 k apply -f argocd-app.yaml
 ```
+
+
+
+
+Ahmed Reda Abd Elbaset Ismail
+
+
