@@ -1,6 +1,6 @@
 # argocd
 Ahmed Reda Abd Elbaset Ismail
-
+Ahmed Reda Abd Elbaset Ismail
 ### Making argocd manage itself
 ```bash
 # First deploy argocd with the provided kustomization
