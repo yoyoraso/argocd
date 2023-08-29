@@ -2,6 +2,7 @@
 Ahmed Reda Abd Elbaset Ismail
 Ahmed Reda Abd Elbaset Ismail
 ### Making argocd manage itself
+aaa
 ```bash
 # First deploy argocd with the provided kustomization
 kustomize build . | k apply -f -
