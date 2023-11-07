@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   destination:
-    namespace: argocd1
+    namespace: argocd
     server: https://kubernetes.default.svc
   source:
     path: .
-    repoURL: https://github.com/theJaxon/argocd.git
+    repoURL: https://github.com/yoyoraso/argocd.git
     targetRevision: main
